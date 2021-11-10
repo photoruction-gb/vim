@@ -11,3 +11,7 @@ https://github.com/junegunn/vim-plug
 ### Plugins update
 
 `:PlugUpdate`
+
+### VimPlug update
+
+`:PlugUpgrade`
