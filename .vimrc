@@ -12,6 +12,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-vdebug/vdebug'
 Plug 'embear/vim-localvimrc'
+Plug 'dense-analysis/ale'
 call plug#end()
 
 " DEFAULT CONFIG
@@ -114,6 +115,12 @@ augroup Cleanup
   autocmd!
   autocmd BufWritePre * :%s/\s\+$//e
 augroup END
+
+" ALE
+let g:ale_sign_error = 'EE'
+let g:ale_sign_warning = 'WW'
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " localvimrc
 let g:localvimrc_persistent = 1
